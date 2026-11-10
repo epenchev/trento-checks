@@ -31,7 +31,7 @@ Review a check yaml file in this repo the way a (SAP Solutions Engineering) memb
 
 ## Findings format
 
-Group by severity, most severe first. Each finding: location (section heading or quoted fragment), the issue, why it matters, and a concrete suggestion.
+Group by severity, most severe first. Each finding: location, the issue, why it matters, and a concrete suggestion.
 
 - **Blocker** — correctness flaw that should stop approval until resolved.
 - **Major** — significant gap, risk; must be addressed before testing.
