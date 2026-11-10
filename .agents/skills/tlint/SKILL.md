@@ -9,7 +9,7 @@ https://github.com/trento-project/tlint
 
 ## How to run tlint.
 ```sh
-docker run --rm -i -v ${PWD}:/data ghcr.io/trento-project/tlint:latest show /data/checks/<trento-check-file.yaml>
+docker run --rm -i -v ${PWD}:/data ghcr.io/trento-project/tlint:latest lint '/data/checks/<trento-check-file.yaml>'
 ```
 
 ## An example running tlint on a trento-check file.
