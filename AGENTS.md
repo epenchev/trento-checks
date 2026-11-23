@@ -7,11 +7,11 @@ https://github.com/trento-project/wanda/blob/main/guides
 https://github.com/trento-project/wanda/blob/main/README.adoc  
 
 ## Guides
-- **[Checks Specification] (https://github.com/trento-project/wanda/blob/main/guides/specification.adoc)**
-- **[Expression Language] (https://github.com/trento-project/wanda/blob/main/guides/expression-language.adoc)**
-- **[Rhai expressions cheatsheet] (https://github.com/trento-project/wanda/blob/main/guides/rhai-expressions-cheat-sheet.cheat.adoc)**
-- **[Gatherers] (https://github.com/trento-project/wanda/blob/main/guides/gatherers.adoc)**
-- **[JSON Schema] (https://github.com/trento-project/wanda/blob/main/guides/check_definition.schema.json)**
+- **Checks Specification https://github.com/trento-project/wanda/blob/main/guides/specification.adoc**
+- **Expression Language https://github.com/trento-project/wanda/blob/main/guides/expression-language.adoc**
+- **Rhai expressions cheatsheet https://github.com/trento-project/wanda/blob/main/guides/rhai-expressions-cheat-sheet.cheat.adoc**
+- **Gatherers https://github.com/trento-project/wanda/blob/main/guides/gatherers.adoc**
+- **JSON Schema https://github.com/trento-project/wanda/blob/main/guides/check_definition.schema.json**
 
 ## CRITICAL DIRECTIVE
 1. Don't use Internet search(ex. Google Search) or similar and use only the information provided.
