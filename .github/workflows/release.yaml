@@ -14,7 +14,7 @@ on:
 jobs:
   release:
     name: Git Release
-    uses: trento-project/.github/.github/workflows/git-release.yaml@d8679bc6bc759e119793a2d59285098613f52055 # v1.10.0
+    uses: trento-project/.github/.github/workflows/git-release.yaml@9eeba3813dd18bf0350ba0c867ef0f3f2cc26342 # v1.13.0
     with:
       triggering_branch: ${{ github.ref_name }}
     secrets:
@@ -34,7 +34,7 @@ jobs:
             branch: ${{ github.ref_name }}
           - tag: rolling
             branch: main
-    uses: trento-project/.github/.github/workflows/publish-containers.yaml@d8679bc6bc759e119793a2d59285098613f52055 # v1.10.0
+    uses: trento-project/.github/.github/workflows/publish-containers.yaml@9eeba3813dd18bf0350ba0c867ef0f3f2cc26342 # v1.13.0
     with:
       branch: ${{ matrix.config.branch }}
       image_name: ${{ matrix.imgname }}
@@ -55,11 +55,13 @@ jobs:
             name: stable
           - obs_project: ${{ vars.OBS_PROJECT_ROLLING }}
             name: rolling
-    uses: trento-project/.github/.github/workflows/obs-sync.yaml@d8679bc6bc759e119793a2d59285098613f52055 # v1.10.0
+    uses: trento-project/.github/.github/workflows/obs-sync.yaml@9eeba3813dd18bf0350ba0c867ef0f3f2cc26342 # v1.13.0
     with:
       update_changelog: true
       obs_project: ${{ matrix.obs_project }}
       obs_package: ${{ vars.OBS_PACKAGE }}
+      obs_image_package: trento-checks-image
+      source_ref: ${{ matrix.name == 'stable' && needs.release.outputs.version || 'main' }}
     secrets:
       gh_token: ${{ secrets.TRENTOBOT_GH_PAT }}
       obs_user: ${{ secrets.OBS_USER }}
