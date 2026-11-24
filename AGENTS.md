@@ -22,5 +22,5 @@ https://github.com/trento-project/wanda/blob/main/README.adoc
 - If you lack information, state: "Information not available in local context." Do not attempt to look it up externally.
 
 ## Commands
-`/tlint`  
-`/check-review`  
+`/tlint` - Runs a basic syntax analysis on the check DSL, runs tlint tool on a check.  
+`/check-review` - Review a trento check in the trento-project checks repository.  
