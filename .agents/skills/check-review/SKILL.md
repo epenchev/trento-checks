@@ -1,6 +1,6 @@
 ---
 name: check-review
-description: Review a trento check in the trento-project checks repository. Use when asked to review a a check .yaml file in this repo.
+description: Review a trento check in the trento-project checks repository. Use when asked to review a check .yaml file in this repo.
 ---
 
 # Check Review
@@ -13,21 +13,23 @@ Review a check yaml file in this repo the way a (SAP Solutions Engineering) memb
 
 ## Procedure
 
-1. **Read** `https://github.com/trento-project/wanda/blob/main/guides/specification.adoc`. This document defines what a compliant trento check should look like. Skim `README.md` for process context if needed.
-2. **Compliance check.** Against the docs above, verify:
+1. Run the `/tlint` command for before proceeding with review, fail if not successful with the error returned from `tlint`.
+2. Every trento-check must start with the SPDX header, header content present in the .licenserc.yaml file for reference.
+3. **Read** [specification.adoc](https://github.com/trento-project/wanda/blob/main/guides/specification.adoc). This document defines what a compliant trento check should look like.   
+4. **Compliance check.** Against the docs above, verify:
    - Verify the **filename** convention.
-   - Verify the the trento-check **structure** as specified in the document.
+   - Verify the trento-check **structure** as specified in the document.
    - Verify the trento-check **id**.
-   - Verify the the trento-check **name**.
+   - Verify the trento-check **name**.
    - Verify **group** as specified.
    - Should have a proper **description** as specified that makes it clear what the trento-check purpose is.
    - Must have a **remediation** as specified that should make sense with the **description** itself.
-   - Verify trento-check has a **severity** as specified.
+   - If **severity** is set, verify that it is an allowed value.
    - **Metadata** is correct: consult with the specification.
-   - **Facts**: Ensure the correct gatherer or gatherers are used for the trento-check.
-   - **Values**: Use the expression language format (https://github.com/trento-project/wanda/blob/main/guides/expression-language.adoc) for verification.
-   - **Expectations**: Use the expression language format (https://github.com/trento-project/wanda/blob/main/guides/expression-language.adoc) for verification, also make sure the correct values and facts are used. Do not check only the syntax but make sure it is semantically correct.
-3. **Report findings** (format below). Answer in precise, objective, technically correct terms; informal tone; no marketing speak.
+   - **Facts**: Ensure the correct gatherer or gatherers are used for the trento-check. Gatherer names, versions and argument formats are documented only in [gatherers.adoc](https://github.com/trento-project/wanda/blob/main/guides/gatherers.adoc).
+   - **Values**: Use the [expression language format](https://github.com/trento-project/wanda/blob/main/guides/expression-language.adoc) for verification.
+   - **Expectations**: Use the [expression language format](https://github.com/trento-project/wanda/blob/main/guides/expression-language.adoc) for verification, also make sure the correct values and facts are used. Do not check only the syntax but make sure it is semantically correct.
+5. **Report findings** (format below). Answer in precise, objective, technically correct terms; informal tone; no marketing speak.
 
 ## Findings format
 
